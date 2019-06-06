@@ -26,7 +26,7 @@ server.post('/api/register', (req, res) => {
     // pass > hashit > hash > hashit > hash > hashit -- 2^10
     user.password = hash
 
-    user.add(user)
+    Users.add(user)
         .then(saved => {
             res.status(201).json(saved);
         })
@@ -34,6 +34,8 @@ server.post('/api/register', (req, res) => {
             res.status(500).json(error);
         });
 });
+
+//dsadsas
 
 server.post('/api/login', (req, res) => {
     let { username, password } = req.body;
