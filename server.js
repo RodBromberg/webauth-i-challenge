@@ -31,6 +31,8 @@ server.post("/api/register", (req, res) => {
     }
 });
 
+//fds
+
 server.get("/api/users", async(req, res) => {
     try {
         const getUsers = await Users.get();
